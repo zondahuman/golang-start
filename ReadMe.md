@@ -7,6 +7,8 @@ GoLang:
 
 在系统里面配置GOPATH=D:\SystemFile\GoWorkspace，然后在GOPATH目录下面建立 src, bin, pkg三个目录，然后把工程建立在src目录下面，例如golang-start
 
+D:\SystemFile\GoWorkspace\bin
+D:\SystemFile\GoWorkspace\pkg
 D:\SystemFile\GoWorkspace\src\golang-start
 
 
