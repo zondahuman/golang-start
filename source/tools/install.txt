@@ -1,0 +1,17 @@
+protoc-2.6.1-win32:
+
+
+
+
+cd E:\SystemWork\opensource\protobuf\protoTool
+E:\SystemWork\opensource\protobuf\protoTool>protoc.exe --go_out=. request.proto
+
+
+
+
+
+
+
+
+
+
