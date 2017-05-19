@@ -10,6 +10,7 @@ func main() {
 	//var request = im.CreateMessage();
 	//fmt.Println(request)
 	//im.Handler(request)
-	im.CycleMessage()
+	//im.CycleMessage()
+	im.CycleMessage1()
 
 }
