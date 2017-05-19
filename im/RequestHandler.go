@@ -8,14 +8,14 @@ import (
 	"encoding/json"
 )
 
-func Handler(params string) string {
+func Handler(params []byte) string {
 	//print(params)
-	//request := &model.RequestVo{}
-	//err := proto.Unmarshal(params, request)
-	//if err != nil {
-	//	log.Fatal("unmarshaling error: ", err)
-	//}
-	//fmt.Println(request)
+	request := &model.RequestVo{}
+	err := proto.Unmarshal(params, request)
+	if err != nil {
+		log.Fatal("unmarshaling error: ", err)
+	}
+	fmt.Println(request)
 	return "bbbb"
 }
 
