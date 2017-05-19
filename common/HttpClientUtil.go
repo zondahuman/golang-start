@@ -6,6 +6,7 @@ import (
 	"net/http"
 	"strings"
 	"net/url"
+	"encoding/json"
 )
 
 func httpGet() {
@@ -81,21 +82,17 @@ func httpDo() {
 	fmt.Println(string(body))
 }
 
-func HttpDoi(m1 map[string]string, httpUrl string) {
+func HttpDoi(m1 map[string]string, httpUrl string) string {
 	client := &http.Client{}
 
-	var clusterinfo = url.Values{}
-	//var clusterinfo = map[string]string{}
+	var request = url.Values{}
 	for k, v := range m1 {
-		clusterinfo.Add(k, v)
+		request.Add(k, v)
 	}
 
-	data := clusterinfo.Encode()
+	data := request.Encode()
 
-	//url := "https://10.10.105.124:8443/user/checkAndUpdate"
 	req, err := http.NewRequest("POST", httpUrl, strings.NewReader(data))
-	//"Content-Type", "application/json; charset=utf-8"
-	//req.Header.Set("Content-Type", "application/x-www-form-urlencoded")
 	req.Header.Set("Content-Type", "application/json; charset=utf-8")
 	req.Header.Set("Cookie", "name=anny")
 
@@ -105,8 +102,9 @@ func HttpDoi(m1 map[string]string, httpUrl string) {
 
 	body, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
-		// handle error
+		panic("no value for $USER")
 	}
-
-	fmt.Println(string(body))
+	fmt.Println(json.Marshal(body))
+	var result = string(body)
+	return result
 }

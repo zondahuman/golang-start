@@ -1,0 +1,19 @@
+package model;  
+  
+
+  
+message RequestVo {  
+required string userId = 1;  
+
+enum SourceType { 
+IOS = 1; 
+ANDROID = 2; 
+WEB = 3; 
+};  
+
+optional SourceType source = 2 [default=IOS];  
+required string content = 3;  
+required string sourceId = 4;  
+}  
+
+
