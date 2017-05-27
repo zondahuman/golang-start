@@ -9,6 +9,8 @@ E:\SystemWork\opensource\protobuf\protoTool>protoc.exe --go_out=. request.proto
 
 
 
+go get github.com/golang/protobuf/protoc-gen-go
+go get github.com/golang/protobuf/proto
 
 
 
