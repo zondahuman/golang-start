@@ -54,11 +54,6 @@ func Test_One(t *testing.T) {
 	i = mike
 	fmt.Println("This is Mike, a Student:")
 	i.SayHi()
-
-}
-
-func Test_sendBeauty(t *testing.T) {
-
 }
 
 
